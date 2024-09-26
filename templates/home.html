@@ -1,1 +1,64 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Urban Air Quality Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Urban Air Quality Risk Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML Model -->
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="tempmax" placeholder="Max Temperature" required="required" /><br>
+      <input type="text" name="tempmin" placeholder="Min Temperature" required="required" /><br>
+      <input type="text" name="temp" placeholder="Temperature" required="required" /><br>
+      <input type="text" name="feelslikemax" placeholder="Feels Like Max Temperature" required="required" /><br>
+      <input type="text" name="feelslikemin" placeholder="Feels Like Min Temperature" required="required" /><br>
+      <input type="text" name="feelslike" placeholder="Feels Like Temperature" required="required" /><br>
+      <input type="text" name="dew" placeholder="Dew Point" required="required" /><br>
+      <input type="text" name="humidity" placeholder="Humidity" required="required" /><br>
+      <input type="text" name="precip" placeholder="Precipitation" required="required" /><br>
+      <input type="text" name="precipprob" placeholder="Precipitation Probability" required="required" /><br>
+      <input type="text" name="precipcover" placeholder="Precipitation Cover" required="required" /><br>
+      <input type="text" name="windgust" placeholder="Wind Gust" required="required" /><br>
+      <input type="text" name="windspeed" placeholder="Wind Speed" required="required" /><br>
+      <input type="text" name="winddir" placeholder="Wind Direction" required="required" /><br>
+      <input type="text" name="pressure" placeholder="Pressure" required="required" /><br>
+      <input type="text" name="cloudcover" placeholder="Cloud Cover" required="required" /><br>
+      <input type="text" name="visibility" placeholder="Visibility" required="required" /><br>
+      <input type="text" name="solarradiation" placeholder="Solar Radiation" required="required" /><br>
+      <input type="text" name="solarenergy" placeholder="Solar Energy" required="required" /><br>
+      <input type="text" name="uvindex" placeholder="UV Index" required="required" /><br>
+      <input type="text" name="severerisk" placeholder="Severe Risk" required="required" /><br>
+      <input type="text" name="sunrise" placeholder="Sunrise Time" required="required" /><br>
+      <input type="text" name="sunriseEpoch" placeholder="Sunrise Epoch" required="required" /><br>
+      <input type="text" name="sunset" placeholder="Sunset Time" required="required" /><br>
+      <input type="text" name="sunsetEpoch" placeholder="Sunset Epoch" required="required" /><br>
+      <input type="text" name="moonphase" placeholder="Moon Phase" required="required" /><br>
+      <input type="text" name="conditions" placeholder="Conditions" required="required" /><br>
+      <input type="text" name="description" placeholder="Description" required="required" /><br>
+      <input type="text" name="icon" placeholder="Weather Icon" required="required" /><br>
+      <input type="text" name="source" placeholder="Source" required="required" /><br>
+      <input type="text" name="City" placeholder="City" required="required" /><br>
+      <input type="text" name="Temp_Range" placeholder="Temperature Range" required="required" /><br>
+      <input type="text" name="Heat_Index" placeholder="Heat Index" required="required" /><br>
+      <input type="text" name="Severity_Score" placeholder="Severity Score" required="required" /><br>
+      <input type="text" name="Day_of_Week" placeholder="Day of Week" required="required" /><br>
+      <input type="text" name="Is_Weekend" placeholder="Is Weekend (1 or 0)" required="required" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+    {{ prediction_text }}
+  </div>
+</body>
+
+</html>
