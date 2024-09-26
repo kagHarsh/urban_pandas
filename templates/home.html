@@ -16,6 +16,8 @@
 
     <!-- Main Input For Receiving Query to our ML Model -->
     <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="datetime" placeholder="datetime" required="required" /><br>
+      <input type="text" name="datetimeEpoch" placeholder="datetimeEpoch" required="required" /><br>
       <input type="text" name="tempmax" placeholder="Max Temperature" required="required" /><br>
       <input type="text" name="tempmin" placeholder="Min Temperature" required="required" /><br>
       <input type="text" name="temp" placeholder="Temperature" required="required" /><br>
