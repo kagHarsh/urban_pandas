@@ -26,14 +26,10 @@ def predict_api():
         
         # Define the order of features as per the dataset
         feature_columns = [
-            'datetime', 'datetimeEpoch', 'tempmax', 'tempmin', 'temp', 
-            'feelslikemax', 'feelslikemin', 'feelslike', 'dew', 'humidity', 
-            'precip', 'precipprob', 'precipcover', 'windgust', 'windspeed', 
-            'winddir', 'pressure', 'cloudcover', 'visibility', 'solarradiation', 
-            'solarenergy', 'uvindex', 'severerisk', 'sunrise', 'sunriseEpoch', 
-            'sunset', 'sunsetEpoch', 'moonphase', 'conditions', 'description', 
-            'icon', 'source', 'City', 'Temp_Range', 'Heat_Index', 
-            'Severity_Score', 'Day_of_Week', 'Is_Weekend'
+            'tempmax', 'tempmin', 'temp', 
+            'feelslikemax', 'feelslikemin', 'dew', 'humidity', 'windspeed', 
+            'pressure', 'cloudcover', 'visibility', 'solarradiation'
+            , 'uvindex', 'severerisk', 'City', 'Temp_Range', 'Heat_Index', 'Severity_Score'
         ]
         
         # Convert the data into a numpy array
