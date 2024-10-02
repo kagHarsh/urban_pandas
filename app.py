@@ -29,7 +29,7 @@ def predict_api():
             'tempmax', 'tempmin', 'temp', 
             'feelslikemax', 'feelslikemin', 'dew', 'humidity', 'windspeed', 
             'pressure', 'cloudcover', 'visibility', 'solarradiation'
-            , 'uvindex', 'severerisk', 'City', 'Temp_Range', 'Heat_Index', 'Severity_Score'
+            , 'uvindex', 'City', 'Temp_Range', 'Heat_Index'
         ]
         
         # Convert the data into a numpy array
